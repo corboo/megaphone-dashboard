@@ -30,7 +30,7 @@ export default function AdImpressionsSummary({
   const typeData = [
     { name: 'Pre-Roll', value: impressionsByType.pre, color: '#D4A847' },
     { name: 'Mid-Roll', value: impressionsByType.mid, color: '#3B82F6' },
-    { name: 'Post-Roll', value: impressionsByType.post, color: '#c49a3f' },
+    { name: 'Post-Roll', value: impressionsByType.post, color: '#10B981' },
   ];
 
   if (impressionsByType.other > 0) {

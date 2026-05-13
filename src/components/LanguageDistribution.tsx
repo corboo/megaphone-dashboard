@@ -8,9 +8,8 @@ interface LangEntry {
 }
 
 const COLORS = [
-  '#D4A847', '#3B82F6', '#c49a3f', '#60A5FA', '#b08d35',
-  '#93C5FD', '#D4A847', '#3B82F6', '#c49a3f', '#60A5FA',
-  '#b08d35',
+  '#D4A847', '#3B82F6', '#EF4444', '#10B981', '#8B5CF6',
+  '#F97316', '#EC4899', '#06B6D4', '#84CC16', '#F59E0B',
 ];
 
 const LANG_LABELS: Record<string, string> = {

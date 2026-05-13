@@ -9,9 +9,9 @@ interface Props {
 const COLORS: Record<string, string> = {
   'iOS/macOS': '#D4A847',
   'Android': '#3B82F6',
-  'Windows': '#60A5FA',
-  'Linux': '#c49a3f',
-  'Smart Speaker': '#93C5FD',
+  'Windows': '#EF4444',
+  'Linux': '#10B981',
+  'Smart Speaker': '#8B5CF6',
   'Other': '#6b6b80',
 };
 
