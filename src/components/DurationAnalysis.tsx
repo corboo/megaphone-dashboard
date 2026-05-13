@@ -15,7 +15,7 @@ interface DurationBucket {
   count: number;
 }
 
-const COLORS = ['#22c55e', '#4ade80', '#6366f1', '#818cf8', '#f97316', '#fb923c', '#ef4444'];
+const COLORS = ['#D4A847', '#3B82F6', '#c49a3f', '#60A5FA', '#b08d35', '#93C5FD', '#D4A847'];
 
 export default function DurationAnalysis({
   data,
@@ -25,20 +25,20 @@ export default function DurationAnalysis({
   totalAnalyzed: number;
 }) {
   return (
-    <div className="bg-[#1e2235] rounded-xl border border-[#2a2f45] p-5">
-      <h2 className="text-lg font-semibold mb-1">⏱️ Episode Duration Distribution</h2>
-      <p className="text-[#8b90a5] text-sm mb-4">
+    <div className="bg-[#12121f] rounded-xl border border-[#1e1e35] p-5">
+      <h2 className="text-lg font-semibold mb-1">Episode Duration Distribution</h2>
+      <p className="text-[#6b6b80] text-sm mb-4">
         Based on {totalAnalyzed.toLocaleString()} episodes from top shows
       </p>
       <div className="h-[300px]">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={data} margin={{ left: 10, right: 10, top: 5, bottom: 5 }}>
-            <XAxis dataKey="range" stroke="#8b90a5" fontSize={11} tick={{ fill: '#e4e6f0' }} />
-            <YAxis stroke="#8b90a5" fontSize={12} tickFormatter={(v) => v.toLocaleString()} />
+            <XAxis dataKey="range" stroke="#6b6b80" fontSize={11} tick={{ fill: '#e8e8f0' }} />
+            <YAxis stroke="#6b6b80" fontSize={12} tickFormatter={(v) => v.toLocaleString()} />
             <Tooltip
-              contentStyle={{ background: '#1e2235', border: '1px solid #2a2f45', borderRadius: 8 }}
-              labelStyle={{ color: '#e4e6f0' }}
-              itemStyle={{ color: '#e4e6f0' }}
+              contentStyle={{ background: '#12121f', border: '1px solid #1e1e35', borderRadius: 8 }}
+              labelStyle={{ color: '#e8e8f0' }}
+              itemStyle={{ color: '#e8e8f0' }}
               formatter={(value: number) => [value.toLocaleString(), 'Episodes']}
             />
             <Bar dataKey="count" radius={[4, 4, 0, 0]}>

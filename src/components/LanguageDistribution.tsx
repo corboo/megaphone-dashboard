@@ -1,6 +1,6 @@
 'use client';
 
-import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from 'recharts';
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts';
 
 interface LangEntry {
   name: string;
@@ -8,9 +8,9 @@ interface LangEntry {
 }
 
 const COLORS = [
-  '#6366f1', '#22c55e', '#f97316', '#06b6d4', '#a855f7',
-  '#eab308', '#ef4444', '#ec4899', '#14b8a6', '#8b5cf6',
-  '#f43f5e', '#84cc16', '#0ea5e9', '#d946ef', '#fbbf24',
+  '#D4A847', '#3B82F6', '#c49a3f', '#60A5FA', '#b08d35',
+  '#93C5FD', '#D4A847', '#3B82F6', '#c49a3f', '#60A5FA',
+  '#b08d35',
 ];
 
 const LANG_LABELS: Record<string, string> = {
@@ -31,7 +31,6 @@ const LANG_LABELS: Record<string, string> = {
 };
 
 export default function LanguageDistribution({ languages }: { languages: LangEntry[] }) {
-  // Top 10 + "Other"
   const top10 = languages.slice(0, 10);
   const otherCount = languages.slice(10).reduce((s, l) => s + l.count, 0);
   const chartData = [
@@ -40,8 +39,8 @@ export default function LanguageDistribution({ languages }: { languages: LangEnt
   ];
 
   return (
-    <div className="bg-[#1e2235] rounded-xl border border-[#2a2f45] p-5">
-      <h2 className="text-lg font-semibold mb-4">🌍 Language Distribution</h2>
+    <div className="bg-[#12121f] rounded-xl border border-[#1e1e35] p-5">
+      <h2 className="text-lg font-semibold mb-4">Language Distribution</h2>
       <div className="h-[350px]">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
@@ -63,9 +62,9 @@ export default function LanguageDistribution({ languages }: { languages: LangEnt
               ))}
             </Pie>
             <Tooltip
-              contentStyle={{ background: '#1e2235', border: '1px solid #2a2f45', borderRadius: 8 }}
-              labelStyle={{ color: '#e4e6f0' }}
-              itemStyle={{ color: '#e4e6f0' }}
+              contentStyle={{ background: '#12121f', border: '1px solid #1e1e35', borderRadius: 8 }}
+              labelStyle={{ color: '#e8e8f0' }}
+              itemStyle={{ color: '#e8e8f0' }}
               formatter={(value: number) => [value.toLocaleString(), 'Shows']}
             />
           </PieChart>
@@ -73,7 +72,7 @@ export default function LanguageDistribution({ languages }: { languages: LangEnt
       </div>
       <div className="flex flex-wrap gap-2 mt-4 justify-center">
         {chartData.map((d, i) => (
-          <div key={d.name} className="flex items-center gap-1 text-xs text-[#8b90a5]">
+          <div key={d.name} className="flex items-center gap-1 text-xs text-[#6b6b80]">
             <div
               className="w-2.5 h-2.5 rounded-full"
               style={{ background: COLORS[i % COLORS.length] }}

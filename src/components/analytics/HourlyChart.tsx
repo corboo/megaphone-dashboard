@@ -24,9 +24,9 @@ export default function HourlyChart({ data }: Props) {
   const peakHour = data.reduce((max, d) => (d.count > max.count ? d : max), data[0]);
 
   return (
-    <div className="bg-[#1e2235] rounded-xl border border-[#2a2f45] p-5">
-      <h2 className="text-lg font-semibold mb-1">🕐 Hourly Listening Pattern</h2>
-      <p className="text-[#8b90a5] text-sm mb-4">
+    <div className="bg-[#12121f] rounded-xl border border-[#1e1e35] p-5">
+      <h2 className="text-lg font-semibold mb-1">Hourly Listening Pattern</h2>
+      <p className="text-[#6b6b80] text-sm mb-4">
         Downloads by hour (UTC) · Peak: {peakHour.hour.toString().padStart(2, '0')}:00 ({peakHour.count.toLocaleString()})
       </p>
       <div className="h-[250px]">
@@ -34,37 +34,37 @@ export default function HourlyChart({ data }: Props) {
           <AreaChart data={chartData} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
             <defs>
               <linearGradient id="hourlyGradient" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#6366f1" stopOpacity={0.4} />
-                <stop offset="95%" stopColor="#6366f1" stopOpacity={0} />
+                <stop offset="5%" stopColor="#D4A847" stopOpacity={0.3} />
+                <stop offset="95%" stopColor="#D4A847" stopOpacity={0} />
               </linearGradient>
             </defs>
-            <CartesianGrid strokeDasharray="3 3" stroke="#2a2f45" />
+            <CartesianGrid strokeDasharray="3 3" stroke="#1e1e35" />
             <XAxis
               dataKey="label"
-              stroke="#8b90a5"
+              stroke="#6b6b80"
               fontSize={10}
               interval={2}
             />
             <YAxis
-              stroke="#8b90a5"
+              stroke="#6b6b80"
               fontSize={11}
               tickFormatter={(v: number) =>
                 v >= 1000 ? `${(v / 1000).toFixed(1)}K` : `${v}`
               }
             />
             <Tooltip
-              contentStyle={{ background: '#1e2235', border: '1px solid #2a2f45', borderRadius: 8 }}
+              contentStyle={{ background: '#12121f', border: '1px solid #1e1e35', borderRadius: 8 }}
               formatter={(value: number) => [value.toLocaleString(), 'Downloads']}
               labelFormatter={(label: string) => `Hour: ${label} UTC`}
             />
             <Area
               type="monotone"
               dataKey="count"
-              stroke="#6366f1"
+              stroke="#D4A847"
               strokeWidth={2}
               fill="url(#hourlyGradient)"
-              dot={{ fill: '#6366f1', r: 3 }}
-              activeDot={{ r: 5, fill: '#818cf8' }}
+              dot={{ fill: '#D4A847', r: 3 }}
+              activeDot={{ r: 5, fill: '#c49a3f' }}
             />
           </AreaChart>
         </ResponsiveContainer>

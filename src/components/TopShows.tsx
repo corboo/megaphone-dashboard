@@ -43,64 +43,64 @@ export default function TopShows({ shows }: { shows: Show[] }) {
   };
 
   const SortIcon = ({ k }: { k: SortKey }) => {
-    if (sortKey !== k) return <span className="text-[#3a3f55] ml-1">⇅</span>;
-    return <span className="text-[#6366f1] ml-1">{sortAsc ? '↑' : '↓'}</span>;
+    if (sortKey !== k) return <span className="text-[#2a2f45] ml-1">⇅</span>;
+    return <span className="text-[#D4A847] ml-1">{sortAsc ? '↑' : '↓'}</span>;
   };
 
   return (
-    <div className="bg-[#1e2235] rounded-xl border border-[#2a2f45] p-5">
-      <h2 className="text-lg font-semibold mb-4">🏆 Top Shows by Episode Count</h2>
+    <div className="bg-[#12121f] rounded-xl border border-[#1e1e35] p-5">
+      <h2 className="text-lg font-semibold mb-4">Top Shows by Episode Count</h2>
       <div className="overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
-            <tr className="border-b border-[#2a2f45]">
-              <th className="text-left p-2 text-[#8b90a5] font-medium">#</th>
+            <tr className="border-b border-[#1e1e35]">
+              <th className="text-left p-2 text-[#6b6b80] font-medium">#</th>
               <th
-                className="text-left p-2 text-[#8b90a5] font-medium cursor-pointer hover:text-white"
+                className="text-left p-2 text-[#6b6b80] font-medium cursor-pointer hover:text-white"
                 onClick={() => toggleSort('title')}
               >
                 Title <SortIcon k="title" />
               </th>
               <th
-                className="text-right p-2 text-[#8b90a5] font-medium cursor-pointer hover:text-white"
+                className="text-right p-2 text-[#6b6b80] font-medium cursor-pointer hover:text-white"
                 onClick={() => toggleSort('episodesCount')}
               >
                 Episodes <SortIcon k="episodesCount" />
               </th>
               <th
-                className="text-left p-2 text-[#8b90a5] font-medium cursor-pointer hover:text-white"
+                className="text-left p-2 text-[#6b6b80] font-medium cursor-pointer hover:text-white"
                 onClick={() => toggleSort('category')}
               >
                 Category <SortIcon k="category" />
               </th>
               <th
-                className="text-left p-2 text-[#8b90a5] font-medium cursor-pointer hover:text-white"
+                className="text-left p-2 text-[#6b6b80] font-medium cursor-pointer hover:text-white"
                 onClick={() => toggleSort('createdAt')}
               >
                 Created <SortIcon k="createdAt" />
               </th>
-              <th className="text-left p-2 text-[#8b90a5] font-medium">Feed</th>
+              <th className="text-left p-2 text-[#6b6b80] font-medium">Feed</th>
             </tr>
           </thead>
           <tbody>
             {sorted.map((show, i) => (
               <tr
                 key={show.id}
-                className="border-b border-[#2a2f45]/50 hover:bg-[#252940] transition-colors"
+                className="border-b border-[#1e1e35]/50 hover:bg-[#1a1a2e] transition-colors"
               >
-                <td className="p-2 text-[#8b90a5]">{i + 1}</td>
+                <td className="p-2 text-[#6b6b80]">{i + 1}</td>
                 <td className="p-2 font-medium max-w-[300px] truncate" title={show.title}>
                   {show.title}
                 </td>
-                <td className="p-2 text-right font-mono text-[#22c55e]">
+                <td className="p-2 text-right font-mono text-[#D4A847]">
                   {show.episodesCount.toLocaleString()}
                 </td>
                 <td className="p-2">
-                  <span className="bg-[#2a2f45] text-[#a78bfa] text-xs px-2 py-0.5 rounded-full">
+                  <span className="bg-[#1e1e35] text-[#3B82F6] text-xs px-2 py-0.5 rounded-full">
                     {show.category}
                   </span>
                 </td>
-                <td className="p-2 text-[#8b90a5] text-xs">
+                <td className="p-2 text-[#6b6b80] text-xs">
                   {new Date(show.createdAt).toLocaleDateString()}
                 </td>
                 <td className="p-2">
@@ -109,7 +109,7 @@ export default function TopShows({ shows }: { shows: Show[] }) {
                       href={show.feedUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#06b6d4] hover:underline text-xs"
+                      className="text-[#3B82F6] hover:underline text-xs"
                     >
                       RSS ↗
                     </a>

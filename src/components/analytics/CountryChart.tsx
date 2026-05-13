@@ -51,9 +51,9 @@ const COUNTRY_NAMES: Record<string, string> = {
 };
 
 const COLORS = [
-  '#6366f1', '#818cf8', '#a78bfa', '#c4b5fd', '#ddd6fe',
-  '#06b6d4', '#22d3ee', '#67e8f9', '#a5f3fc', '#cffafe',
-  '#22c55e', '#4ade80', '#86efac', '#bbf7d0', '#dcfce7',
+  '#D4A847', '#3B82F6', '#c49a3f', '#60A5FA', '#b08d35',
+  '#93C5FD', '#D4A847', '#3B82F6', '#c49a3f', '#60A5FA',
+  '#b08d35', '#93C5FD', '#D4A847', '#3B82F6', '#c49a3f',
 ];
 
 export default function CountryChart({ data }: Props) {
@@ -64,9 +64,9 @@ export default function CountryChart({ data }: Props) {
   }));
 
   return (
-    <div className="bg-[#1e2235] rounded-xl border border-[#2a2f45] p-5">
-      <h2 className="text-lg font-semibold mb-1">🌍 Downloads by Country</h2>
-      <p className="text-[#8b90a5] text-sm mb-4">Top 15 countries by download count</p>
+    <div className="bg-[#12121f] rounded-xl border border-[#1e1e35] p-5">
+      <h2 className="text-lg font-semibold mb-1">Downloads by Country</h2>
+      <p className="text-[#6b6b80] text-sm mb-4">Top 15 countries by download count</p>
       <div className="h-[400px]">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
@@ -74,11 +74,11 @@ export default function CountryChart({ data }: Props) {
             layout="vertical"
             margin={{ top: 5, right: 20, left: 120, bottom: 5 }}
           >
-            <CartesianGrid strokeDasharray="3 3" stroke="#2a2f45" horizontal={false} />
-            <XAxis type="number" stroke="#8b90a5" fontSize={11} tickFormatter={(v: number) => v >= 1000 ? `${(v / 1000).toFixed(0)}K` : `${v}`} />
-            <YAxis dataKey="name" type="category" stroke="#8b90a5" fontSize={11} width={110} />
+            <CartesianGrid strokeDasharray="3 3" stroke="#1e1e35" horizontal={false} />
+            <XAxis type="number" stroke="#6b6b80" fontSize={11} tickFormatter={(v: number) => v >= 1000 ? `${(v / 1000).toFixed(0)}K` : `${v}`} />
+            <YAxis dataKey="name" type="category" stroke="#6b6b80" fontSize={11} width={110} />
             <Tooltip
-              contentStyle={{ background: '#1e2235', border: '1px solid #2a2f45', borderRadius: 8 }}
+              contentStyle={{ background: '#12121f', border: '1px solid #1e1e35', borderRadius: 8 }}
               formatter={(value: number) => [value.toLocaleString(), 'Downloads']}
             />
             <Bar dataKey="count" radius={[0, 4, 4, 0]}>

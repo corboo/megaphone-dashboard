@@ -8,10 +8,10 @@ interface Props {
 }
 
 const cards = [
-  { key: 'totalPodcasts', label: 'Total Podcasts', icon: '🎙️', color: '#6366f1' },
-  { key: 'totalEpisodes', label: 'Total Episodes', icon: '📻', color: '#22c55e' },
-  { key: 'avgEpisodesPerShow', label: 'Avg Episodes/Show', icon: '📊', color: '#f97316' },
-  { key: 'totalCategories', label: 'Categories', icon: '🏷️', color: '#06b6d4' },
+  { key: 'totalPodcasts', label: 'Total Podcasts', color: '#D4A847' },
+  { key: 'totalEpisodes', label: 'Total Episodes', color: '#3B82F6' },
+  { key: 'avgEpisodesPerShow', label: 'Avg Episodes/Show', color: '#D4A847' },
+  { key: 'totalCategories', label: 'Categories', color: '#3B82F6' },
 ];
 
 export default function OverviewCards(props: Props) {
@@ -20,11 +20,10 @@ export default function OverviewCards(props: Props) {
       {cards.map((card) => (
         <div
           key={card.key}
-          className="bg-[#1e2235] rounded-xl border border-[#2a2f45] p-5 hover:border-[#3a3f55] transition-colors"
+          className="bg-[#12121f] rounded-xl border border-[#1e1e35] p-5 hover:border-[#D4A847]/20 transition-colors"
         >
           <div className="flex items-center justify-between mb-3">
-            <span className="text-[#8b90a5] text-sm font-medium">{card.label}</span>
-            <span className="text-2xl">{card.icon}</span>
+            <span className="text-[#6b6b80] text-sm font-medium">{card.label}</span>
           </div>
           <div className="text-3xl font-bold" style={{ color: card.color }}>
             {(props[card.key as keyof Props] as number).toLocaleString()}

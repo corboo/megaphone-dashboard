@@ -43,16 +43,16 @@ export default function RecentActivity({
   const items = tab === 'created' ? created : updated;
 
   return (
-    <div className="bg-[#1e2235] rounded-xl border border-[#2a2f45] p-5">
-      <h2 className="text-lg font-semibold mb-4">🕐 Recent Activity</h2>
+    <div className="bg-[#12121f] rounded-xl border border-[#1e1e35] p-5">
+      <h2 className="text-lg font-semibold mb-4">Recent Activity</h2>
 
       <div className="flex gap-2 mb-4">
         <button
           onClick={() => setTab('created')}
           className={`px-3 py-1.5 text-sm rounded-lg transition-colors ${
             tab === 'created'
-              ? 'bg-[#6366f1] text-white'
-              : 'bg-[#2a2f45] text-[#8b90a5] hover:bg-[#3a3f55]'
+              ? 'bg-[#D4A847]/10 text-[#D4A847]'
+              : 'bg-[#1e1e35] text-[#6b6b80] hover:bg-[#252535]'
           }`}
         >
           Recently Created
@@ -61,8 +61,8 @@ export default function RecentActivity({
           onClick={() => setTab('updated')}
           className={`px-3 py-1.5 text-sm rounded-lg transition-colors ${
             tab === 'updated'
-              ? 'bg-[#6366f1] text-white'
-              : 'bg-[#2a2f45] text-[#8b90a5] hover:bg-[#3a3f55]'
+              ? 'bg-[#D4A847]/10 text-[#D4A847]'
+              : 'bg-[#1e1e35] text-[#6b6b80] hover:bg-[#252535]'
           }`}
         >
           Recently Updated
@@ -73,22 +73,22 @@ export default function RecentActivity({
         {items.map((item) => (
           <div
             key={item.id}
-            className="flex items-center justify-between p-3 rounded-lg bg-[#252940] hover:bg-[#2a2f50] transition-colors"
+            className="flex items-center justify-between p-3 rounded-lg bg-[#0a0a1a] hover:bg-[#15152a] transition-colors"
           >
             <div className="flex-1 min-w-0">
               <div className="text-sm font-medium truncate">{item.title}</div>
-              <div className="flex gap-3 mt-1 text-xs text-[#8b90a5]">
+              <div className="flex gap-3 mt-1 text-xs text-[#6b6b80]">
                 <span>{item.episodesCount} episodes</span>
-                <span className="bg-[#2a2f45] text-[#a78bfa] px-1.5 py-0.5 rounded">
+                <span className="bg-[#1e1e35] text-[#3B82F6] px-1.5 py-0.5 rounded">
                   {item.category}
                 </span>
               </div>
             </div>
             <div className="text-right ml-3 flex-shrink-0">
-              <div className="text-xs text-[#6366f1] font-medium">
+              <div className="text-xs text-[#D4A847] font-medium">
                 {timeAgo(tab === 'created' ? item.createdAt : item.updatedAt)}
               </div>
-              <div className="text-[10px] text-[#8b90a5]">
+              <div className="text-[10px] text-[#6b6b80]">
                 {formatDate(tab === 'created' ? item.createdAt : item.updatedAt)}
               </div>
             </div>

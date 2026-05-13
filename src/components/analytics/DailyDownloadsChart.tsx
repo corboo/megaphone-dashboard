@@ -19,7 +19,6 @@ interface Props {
 }
 
 export default function DailyDownloadsChart({ downloads, impressions }: Props) {
-  // Merge downloads and impressions by date
   const impMap: Record<string, number> = {};
   impressions.forEach((d) => { impMap[d.date] = d.count; });
 
@@ -34,30 +33,30 @@ export default function DailyDownloadsChart({ downloads, impressions }: Props) {
   }));
 
   return (
-    <div className="bg-[#1e2235] rounded-xl border border-[#2a2f45] p-5">
-      <h2 className="text-lg font-semibold mb-1">📈 Daily Downloads & Impressions</h2>
-      <p className="text-[#8b90a5] text-sm mb-4">
+    <div className="bg-[#12121f] rounded-xl border border-[#1e1e35] p-5">
+      <h2 className="text-lg font-semibold mb-1">Daily Downloads & Impressions</h2>
+      <p className="text-[#6b6b80] text-sm mb-4">
         Download events and ad impressions by day
       </p>
       <div className="h-[320px]">
         <ResponsiveContainer width="100%" height="100%">
           <ComposedChart data={data} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#2a2f45" />
-            <XAxis dataKey="label" stroke="#8b90a5" fontSize={12} />
-            <YAxis stroke="#8b90a5" fontSize={12} tickFormatter={(v: number) => v >= 1000 ? `${(v / 1000).toFixed(0)}K` : `${v}`} />
+            <CartesianGrid strokeDasharray="3 3" stroke="#1e1e35" />
+            <XAxis dataKey="label" stroke="#6b6b80" fontSize={12} />
+            <YAxis stroke="#6b6b80" fontSize={12} tickFormatter={(v: number) => v >= 1000 ? `${(v / 1000).toFixed(0)}K` : `${v}`} />
             <Tooltip
-              contentStyle={{ background: '#1e2235', border: '1px solid #2a2f45', borderRadius: 8 }}
+              contentStyle={{ background: '#12121f', border: '1px solid #1e1e35', borderRadius: 8 }}
               formatter={(value: number, name: string) => [value.toLocaleString(), name]}
             />
             <Legend />
-            <Bar dataKey="downloads" name="Downloads" fill="#6366f1" radius={[4, 4, 0, 0]} />
+            <Bar dataKey="downloads" name="Downloads" fill="#D4A847" radius={[4, 4, 0, 0]} />
             <Line
               type="monotone"
               dataKey="impressions"
               name="Impressions"
-              stroke="#22c55e"
+              stroke="#3B82F6"
               strokeWidth={2}
-              dot={{ fill: '#22c55e', r: 4 }}
+              dot={{ fill: '#3B82F6', r: 4 }}
             />
           </ComposedChart>
         </ResponsiveContainer>

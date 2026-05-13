@@ -7,21 +7,12 @@ interface Props {
 }
 
 const COLORS: Record<string, string> = {
-  'iOS/macOS': '#6366f1',
-  'Android': '#22c55e',
-  'Windows': '#06b6d4',
-  'Linux': '#f97316',
-  'Smart Speaker': '#a855f7',
-  'Other': '#8b90a5',
-};
-
-const ICONS: Record<string, string> = {
-  'iOS/macOS': '🍎',
-  'Android': '🤖',
-  'Windows': '🪟',
-  'Linux': '🐧',
-  'Smart Speaker': '🔊',
-  'Other': '❓',
+  'iOS/macOS': '#D4A847',
+  'Android': '#3B82F6',
+  'Windows': '#60A5FA',
+  'Linux': '#c49a3f',
+  'Smart Speaker': '#93C5FD',
+  'Other': '#6b6b80',
 };
 
 export default function DeviceChart({ data }: Props) {
@@ -33,9 +24,9 @@ export default function DeviceChart({ data }: Props) {
   }));
 
   return (
-    <div className="bg-[#1e2235] rounded-xl border border-[#2a2f45] p-5">
-      <h2 className="text-lg font-semibold mb-1">💻 Downloads by Device</h2>
-      <p className="text-[#8b90a5] text-sm mb-4">Operating system distribution</p>
+    <div className="bg-[#12121f] rounded-xl border border-[#1e1e35] p-5">
+      <h2 className="text-lg font-semibold mb-1">Downloads by Device</h2>
+      <p className="text-[#6b6b80] text-sm mb-4">Operating system distribution</p>
       <div className="flex flex-col lg:flex-row items-center gap-4">
         <div className="h-[250px] w-full lg:w-1/2">
           <ResponsiveContainer width="100%" height="100%">
@@ -50,11 +41,11 @@ export default function DeviceChart({ data }: Props) {
                 nameKey="name"
               >
                 {chartData.map((entry) => (
-                  <Cell key={entry.name} fill={COLORS[entry.name] || '#8b90a5'} />
+                  <Cell key={entry.name} fill={COLORS[entry.name] || '#6b6b80'} />
                 ))}
               </Pie>
               <Tooltip
-                contentStyle={{ background: '#1e2235', border: '1px solid #2a2f45', borderRadius: 8 }}
+                contentStyle={{ background: '#12121f', border: '1px solid #1e1e35', borderRadius: 8 }}
                 formatter={(value: number, name: string) => [value.toLocaleString(), name]}
               />
             </PieChart>
@@ -64,23 +55,26 @@ export default function DeviceChart({ data }: Props) {
           {chartData.map((d) => (
             <div key={d.name} className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <span className="text-lg">{ICONS[d.name] || '❓'}</span>
+                <div
+                  className="w-3 h-3 rounded-full flex-shrink-0"
+                  style={{ backgroundColor: COLORS[d.name] || '#6b6b80' }}
+                />
                 <span className="text-sm">{d.name}</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-24 h-2 bg-[#2a2f45] rounded-full overflow-hidden">
+                <div className="w-24 h-2 bg-[#1e1e35] rounded-full overflow-hidden">
                   <div
                     className="h-full rounded-full"
                     style={{
                       width: `${parseFloat(d.pct)}%`,
-                      backgroundColor: COLORS[d.name] || '#8b90a5',
+                      backgroundColor: COLORS[d.name] || '#6b6b80',
                     }}
                   />
                 </div>
-                <span className="text-sm font-mono min-w-[60px] text-right" style={{ color: COLORS[d.name] || '#8b90a5' }}>
+                <span className="text-sm font-mono min-w-[60px] text-right" style={{ color: COLORS[d.name] || '#6b6b80' }}>
                   {d.pct}%
                 </span>
-                <span className="text-xs text-[#8b90a5] min-w-[50px] text-right">
+                <span className="text-xs text-[#6b6b80] min-w-[50px] text-right">
                   {d.value.toLocaleString()}
                 </span>
               </div>

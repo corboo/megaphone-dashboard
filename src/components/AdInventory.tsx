@@ -17,12 +17,12 @@ export default function AdInventory({ data }: { data: AdData }) {
     { name: 'No Ad Slots', value: data.withoutAdSlots },
   ];
 
-  const COLORS = ['#22c55e', '#ef4444'];
+  const COLORS = ['#D4A847', '#3B82F6'];
 
   return (
-    <div className="bg-[#1e2235] rounded-xl border border-[#2a2f45] p-5">
-      <h2 className="text-lg font-semibold mb-1">💰 Ad Inventory Overview</h2>
-      <p className="text-[#8b90a5] text-sm mb-4">
+    <div className="bg-[#12121f] rounded-xl border border-[#1e1e35] p-5">
+      <h2 className="text-lg font-semibold mb-1">Ad Inventory Overview</h2>
+      <p className="text-[#6b6b80] text-sm mb-4">
         Based on {data.totalAnalyzed.toLocaleString()} episodes from top shows
       </p>
 
@@ -44,7 +44,7 @@ export default function AdInventory({ data }: { data: AdData }) {
                 ))}
               </Pie>
               <Tooltip
-                contentStyle={{ background: '#1e2235', border: '1px solid #2a2f45', borderRadius: 8 }}
+                contentStyle={{ background: '#12121f', border: '1px solid #1e1e35', borderRadius: 8 }}
                 formatter={(value: number) => [value.toLocaleString(), 'Episodes']}
               />
             </PieChart>
@@ -53,34 +53,34 @@ export default function AdInventory({ data }: { data: AdData }) {
 
         <div className="flex-1 space-y-3">
           <div className="flex items-center gap-3">
-            <div className="w-3 h-3 rounded-full bg-[#22c55e]" />
+            <div className="w-3 h-3 rounded-full bg-[#D4A847]" />
             <span className="text-sm">
-              <strong className="text-[#22c55e]">{data.withAdSlots.toLocaleString()}</strong>{' '}
-              <span className="text-[#8b90a5]">episodes with ad slots</span>
+              <strong className="text-[#D4A847]">{data.withAdSlots.toLocaleString()}</strong>{' '}
+              <span className="text-[#6b6b80]">episodes with ad slots</span>
             </span>
           </div>
           <div className="flex items-center gap-3">
-            <div className="w-3 h-3 rounded-full bg-[#ef4444]" />
+            <div className="w-3 h-3 rounded-full bg-[#3B82F6]" />
             <span className="text-sm">
-              <strong className="text-[#ef4444]">{data.withoutAdSlots.toLocaleString()}</strong>{' '}
-              <span className="text-[#8b90a5]">episodes without ad slots</span>
+              <strong className="text-[#3B82F6]">{data.withoutAdSlots.toLocaleString()}</strong>{' '}
+              <span className="text-[#6b6b80]">episodes without ad slots</span>
             </span>
           </div>
 
-          <div className="mt-4 pt-4 border-t border-[#2a2f45]">
-            <h3 className="text-sm font-medium text-[#8b90a5] mb-2">Slot Breakdown</h3>
+          <div className="mt-4 pt-4 border-t border-[#1e1e35]">
+            <h3 className="text-sm font-medium text-[#6b6b80] mb-2">Slot Breakdown</h3>
             <div className="grid grid-cols-3 gap-3">
               <div className="text-center">
-                <div className="text-xl font-bold text-[#6366f1]">{data.totalPreSlots.toLocaleString()}</div>
-                <div className="text-xs text-[#8b90a5]">Pre-Roll</div>
+                <div className="text-xl font-bold text-[#D4A847]">{data.totalPreSlots.toLocaleString()}</div>
+                <div className="text-xs text-[#6b6b80]">Pre-Roll</div>
               </div>
               <div className="text-center">
-                <div className="text-xl font-bold text-[#f97316]">{data.totalMidSlots.toLocaleString()}</div>
-                <div className="text-xs text-[#8b90a5]">Mid-Roll</div>
+                <div className="text-xl font-bold text-[#3B82F6]">{data.totalMidSlots.toLocaleString()}</div>
+                <div className="text-xs text-[#6b6b80]">Mid-Roll</div>
               </div>
               <div className="text-center">
-                <div className="text-xl font-bold text-[#a855f7]">{data.totalPostSlots.toLocaleString()}</div>
-                <div className="text-xs text-[#8b90a5]">Post-Roll</div>
+                <div className="text-xl font-bold text-[#c49a3f]">{data.totalPostSlots.toLocaleString()}</div>
+                <div className="text-xs text-[#6b6b80]">Post-Roll</div>
               </div>
             </div>
           </div>

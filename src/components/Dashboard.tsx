@@ -52,23 +52,35 @@ export default function Dashboard({ data }: { data: DashboardData }) {
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <header className="border-b border-[#2a2f45] bg-[#1a1d2e]/80 backdrop-blur-sm sticky top-0 z-50">
+      <header className="border-b border-[#1e1e35] bg-[#10101f]/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div>
-            <h1 className="text-2xl font-bold">
-              📡 Megaphone Analytics
-            </h1>
-            <p className="text-[#8b90a5] text-sm">Inception Point AI — Network Dashboard</p>
-          </div>
           <div className="flex items-center gap-4">
-            <Link
-              href="/analytics/"
-              className="text-sm text-[#818cf8] hover:text-[#a5b4fc] transition-colors flex items-center gap-1"
-            >
-              📊 Listener Analytics
-            </Link>
-            <div className="text-right">
-              <div className="text-xs text-[#8b90a5]">
+            <img
+              src="https://www.inceptionpoint.ai/wp-content/uploads/2025/08/cropped-Inception-Point-Logo-FINAL-RGB.png"
+              alt="IPAI"
+              className="h-8 w-auto brightness-150"
+            />
+            <div>
+              <h1 className="text-xl font-semibold text-white">
+                Megaphone Analytics
+              </h1>
+              <p className="text-[#6b6b80] text-xs">Network Catalog Dashboard</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-6">
+            <nav className="flex items-center gap-1 bg-[#12121f] rounded-lg p-1">
+              <span className="px-3 py-1.5 text-sm rounded-md bg-[#D4A847]/10 text-[#D4A847] font-medium">
+                Catalog
+              </span>
+              <Link
+                href="/analytics/"
+                className="px-3 py-1.5 text-sm rounded-md text-[#6b6b80] hover:text-white transition-colors"
+              >
+                Analytics
+              </Link>
+            </nav>
+            <div className="text-right hidden sm:block">
+              <div className="text-xs text-[#6b6b80]">
                 {stats.totalPodcasts.toLocaleString()} shows · {stats.totalEpisodes.toLocaleString()} episodes
               </div>
             </div>
@@ -78,7 +90,6 @@ export default function Dashboard({ data }: { data: DashboardData }) {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-6 space-y-6">
-        {/* Overview Cards */}
         <OverviewCards
           totalPodcasts={stats.totalPodcasts}
           totalEpisodes={stats.totalEpisodes}
@@ -86,19 +97,14 @@ export default function Dashboard({ data }: { data: DashboardData }) {
           totalCategories={stats.totalCategories}
         />
 
-        {/* Row: Category + Language */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <CategoryBreakdown categories={stats.categories} />
           <LanguageDistribution languages={stats.languages} />
         </div>
 
-        {/* Catalog Growth */}
         <CatalogGrowth data={stats.catalogGrowth} />
-
-        {/* Top Shows */}
         <TopShows shows={topShows} />
 
-        {/* Row: Duration + Ad Inventory */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <DurationAnalysis
             data={stats.durationDistribution}
@@ -107,7 +113,6 @@ export default function Dashboard({ data }: { data: DashboardData }) {
           <AdInventory data={stats.adInventory} />
         </div>
 
-        {/* Row: Feed Health + Recent Activity */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <FeedHealth data={stats.feedHealth} />
           <RecentActivity
@@ -118,13 +123,16 @@ export default function Dashboard({ data }: { data: DashboardData }) {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-[#2a2f45] mt-12">
-        <div className="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-[#8b90a5]">
-          Data from Megaphone API | Last updated:{' '}
-          {new Date(fetchedAt).toLocaleString('en-US', {
-            dateStyle: 'medium',
-            timeStyle: 'short',
-          })}
+      <footer className="border-t border-[#1e1e35] mt-12">
+        <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[#6b6b80]">
+          <span>© 2026 Inception Point AI | Megaphone Analytics Platform</span>
+          <span>
+            Last updated:{' '}
+            {new Date(fetchedAt).toLocaleString('en-US', {
+              dateStyle: 'medium',
+              timeStyle: 'short',
+            })}
+          </span>
         </div>
       </footer>
     </div>

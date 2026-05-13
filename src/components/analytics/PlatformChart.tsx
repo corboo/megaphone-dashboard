@@ -1,21 +1,19 @@
 'use client';
 
-import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from 'recharts';
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts';
 
 interface Props {
   data: { platform: string; count: number }[];
 }
 
 const COLORS = [
-  '#6366f1', '#22c55e', '#f97316', '#06b6d4', '#a855f7',
-  '#ec4899', '#eab308', '#ef4444', '#14b8a6', '#8b5cf6',
-  '#f43f5e', '#84cc16',
+  '#D4A847', '#3B82F6', '#c49a3f', '#60A5FA', '#b08d35',
+  '#93C5FD', '#D4A847', '#3B82F6', '#c49a3f',
 ];
 
 export default function PlatformChart({ data }: Props) {
   const total = data.reduce((s, d) => s + d.count, 0);
 
-  // Group smaller platforms into "Other"
   const TOP_N = 8;
   const top = data.slice(0, TOP_N);
   const otherCount = data.slice(TOP_N).reduce((s, d) => s + d.count, 0);
@@ -31,9 +29,9 @@ export default function PlatformChart({ data }: Props) {
   ];
 
   return (
-    <div className="bg-[#1e2235] rounded-xl border border-[#2a2f45] p-5">
-      <h2 className="text-lg font-semibold mb-1">📱 Downloads by Platform</h2>
-      <p className="text-[#8b90a5] text-sm mb-4">Listening app distribution</p>
+    <div className="bg-[#12121f] rounded-xl border border-[#1e1e35] p-5">
+      <h2 className="text-lg font-semibold mb-1">Downloads by Platform</h2>
+      <p className="text-[#6b6b80] text-sm mb-4">Listening app distribution</p>
       <div className="flex flex-col lg:flex-row items-center gap-4">
         <div className="h-[280px] w-full lg:w-1/2">
           <ResponsiveContainer width="100%" height="100%">
@@ -54,7 +52,7 @@ export default function PlatformChart({ data }: Props) {
                 ))}
               </Pie>
               <Tooltip
-                contentStyle={{ background: '#1e2235', border: '1px solid #2a2f45', borderRadius: 8 }}
+                contentStyle={{ background: '#12121f', border: '1px solid #1e1e35', borderRadius: 8 }}
                 formatter={(value: number, name: string) => [value.toLocaleString(), name]}
               />
             </PieChart>
@@ -71,7 +69,7 @@ export default function PlatformChart({ data }: Props) {
                 <span className="truncate">{d.name}</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="text-[#8b90a5] text-xs">{d.pct}%</span>
+                <span className="text-[#6b6b80] text-xs">{d.pct}%</span>
                 <span className="font-mono text-xs" style={{ color: COLORS[i % COLORS.length] }}>
                   {d.value.toLocaleString()}
                 </span>
