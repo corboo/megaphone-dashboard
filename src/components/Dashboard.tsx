@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import OverviewCards from '@/components/OverviewCards';
 import CategoryBreakdown from '@/components/CategoryBreakdown';
 import CatalogGrowth from '@/components/CatalogGrowth';
@@ -59,9 +60,17 @@ export default function Dashboard({ data }: { data: DashboardData }) {
             </h1>
             <p className="text-[#8b90a5] text-sm">Inception Point AI — Network Dashboard</p>
           </div>
-          <div className="text-right">
-            <div className="text-xs text-[#8b90a5]">
-              {stats.totalPodcasts.toLocaleString()} shows · {stats.totalEpisodes.toLocaleString()} episodes
+          <div className="flex items-center gap-4">
+            <Link
+              href="/analytics/"
+              className="text-sm text-[#818cf8] hover:text-[#a5b4fc] transition-colors flex items-center gap-1"
+            >
+              📊 Listener Analytics
+            </Link>
+            <div className="text-right">
+              <div className="text-xs text-[#8b90a5]">
+                {stats.totalPodcasts.toLocaleString()} shows · {stats.totalEpisodes.toLocaleString()} episodes
+              </div>
             </div>
           </div>
         </div>

@@ -1,0 +1,110 @@
+'use client';
+
+import { useState, useMemo } from 'react';
+
+interface Show {
+  podcast_id: string;
+  title: string;
+  category: string;
+  count: number;
+  pct: string;
+}
+
+type SortKey = 'count' | 'title' | 'pct';
+
+export default function TopShowsTable({ shows, totalDownloads }: { shows: Show[]; totalDownloads: number }) {
+  const [sortKey, setSortKey] = useState<SortKey>('count');
+  const [sortAsc, setSortAsc] = useState(false);
+
+  const sorted = useMemo(() => {
+    return [...shows].sort((a, b) => {
+      let cmp = 0;
+      if (sortKey === 'count') cmp = a.count - b.count;
+      else if (sortKey === 'title') cmp = a.title.localeCompare(b.title);
+      else if (sortKey === 'pct') cmp = parseFloat(a.pct) - parseFloat(b.pct);
+      return sortAsc ? cmp : -cmp;
+    });
+  }, [shows, sortKey, sortAsc]);
+
+  const toggleSort = (key: SortKey) => {
+    if (sortKey === key) setSortAsc(!sortAsc);
+    else { setSortKey(key); setSortAsc(false); }
+  };
+
+  const SortIcon = ({ k }: { k: SortKey }) => {
+    if (sortKey !== k) return <span className="text-[#3a3f55] ml-1">⇅</span>;
+    return <span className="text-[#6366f1] ml-1">{sortAsc ? '↑' : '↓'}</span>;
+  };
+
+  const maxCount = shows.length > 0 ? shows[0].count : 1;
+
+  return (
+    <div className="bg-[#1e2235] rounded-xl border border-[#2a2f45] p-5">
+      <h2 className="text-lg font-semibold mb-1">🏆 Top Shows by Downloads</h2>
+      <p className="text-[#8b90a5] text-sm mb-4">
+        {shows.length} shows with downloads · {totalDownloads.toLocaleString()} total
+      </p>
+      <div className="overflow-x-auto">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-[#2a2f45]">
+              <th className="text-left p-2 text-[#8b90a5] font-medium w-10">#</th>
+              <th
+                className="text-left p-2 text-[#8b90a5] font-medium cursor-pointer hover:text-white"
+                onClick={() => toggleSort('title')}
+              >
+                Show <SortIcon k="title" />
+              </th>
+              <th className="text-left p-2 text-[#8b90a5] font-medium">Category</th>
+              <th
+                className="text-right p-2 text-[#8b90a5] font-medium cursor-pointer hover:text-white"
+                onClick={() => toggleSort('count')}
+              >
+                Downloads <SortIcon k="count" />
+              </th>
+              <th
+                className="text-right p-2 text-[#8b90a5] font-medium cursor-pointer hover:text-white w-20"
+                onClick={() => toggleSort('pct')}
+              >
+                Share <SortIcon k="pct" />
+              </th>
+              <th className="p-2 text-[#8b90a5] font-medium w-32"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {sorted.slice(0, 20).map((show, i) => (
+              <tr
+                key={show.podcast_id}
+                className="border-b border-[#2a2f45]/50 hover:bg-[#252940] transition-colors"
+              >
+                <td className="p-2 text-[#8b90a5]">{i + 1}</td>
+                <td className="p-2 font-medium max-w-[300px] truncate" title={show.title}>
+                  {show.title}
+                </td>
+                <td className="p-2">
+                  <span className="bg-[#2a2f45] text-[#a78bfa] text-xs px-2 py-0.5 rounded-full">
+                    {show.category}
+                  </span>
+                </td>
+                <td className="p-2 text-right font-mono text-[#22c55e]">
+                  {show.count.toLocaleString()}
+                </td>
+                <td className="p-2 text-right font-mono text-[#8b90a5]">
+                  {show.pct}%
+                </td>
+                <td className="p-2">
+                  <div className="w-full h-2 bg-[#2a2f45] rounded-full overflow-hidden">
+                    <div
+                      className="h-full rounded-full bg-[#6366f1]"
+                      style={{ width: `${(show.count / maxCount) * 100}%` }}
+                    />
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}

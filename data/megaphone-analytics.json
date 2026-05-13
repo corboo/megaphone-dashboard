@@ -1,0 +1,1650 @@
+{
+  "generatedAt": "2026-05-13T19:17:41.334Z",
+  "dateRange": {
+    "start": "2026-05-07",
+    "end": "2026-05-13",
+    "days": 7
+  },
+  "summary": {
+    "totalDownloads": 64101,
+    "totalImpressions": 44226,
+    "uniqueDownloads": 64101,
+    "downloadsWithAds": 6090,
+    "fillRate": 9.5,
+    "avgDailyDownloads": 9157,
+    "avgDailyImpressions": 7371,
+    "uniquePodcasts": 1273,
+    "uniqueEpisodes": 36923,
+    "uniqueCountries": 157,
+    "uniquePlatforms": 42
+  },
+  "dailyDownloads": [
+    {
+      "date": "2026-05-07",
+      "count": 7
+    },
+    {
+      "date": "2026-05-08",
+      "count": 15
+    },
+    {
+      "date": "2026-05-09",
+      "count": 18
+    },
+    {
+      "date": "2026-05-10",
+      "count": 22
+    },
+    {
+      "date": "2026-05-11",
+      "count": 1363
+    },
+    {
+      "date": "2026-05-12",
+      "count": 23164
+    },
+    {
+      "date": "2026-05-13",
+      "count": 39512
+    }
+  ],
+  "dailyImpressions": [
+    {
+      "date": "2026-05-08",
+      "count": 139
+    },
+    {
+      "date": "2026-05-09",
+      "count": 50
+    },
+    {
+      "date": "2026-05-10",
+      "count": 111
+    },
+    {
+      "date": "2026-05-11",
+      "count": 9916
+    },
+    {
+      "date": "2026-05-12",
+      "count": 22359
+    },
+    {
+      "date": "2026-05-13",
+      "count": 11651
+    }
+  ],
+  "byCountry": [
+    {
+      "country": "US",
+      "count": 47775
+    },
+    {
+      "country": "GB",
+      "count": 3444
+    },
+    {
+      "country": "CA",
+      "count": 3087
+    },
+    {
+      "country": "IN",
+      "count": 1277
+    },
+    {
+      "country": "AU",
+      "count": 1222
+    },
+    {
+      "country": "DE",
+      "count": 749
+    },
+    {
+      "country": "KR",
+      "count": 363
+    },
+    {
+      "country": "ZA",
+      "count": 355
+    },
+    {
+      "country": "NZ",
+      "count": 354
+    },
+    {
+      "country": "IE",
+      "count": 343
+    },
+    {
+      "country": "NL",
+      "count": 310
+    },
+    {
+      "country": "FR",
+      "count": 279
+    },
+    {
+      "country": "ES",
+      "count": 244
+    },
+    {
+      "country": "PH",
+      "count": 238
+    },
+    {
+      "country": "MX",
+      "count": 234
+    },
+    {
+      "country": "IT",
+      "count": 209
+    },
+    {
+      "country": "NG",
+      "count": 194
+    },
+    {
+      "country": "BE",
+      "count": 178
+    },
+    {
+      "country": "CN",
+      "count": 178
+    },
+    {
+      "country": "JP",
+      "count": 147
+    }
+  ],
+  "byPlatform": [
+    {
+      "platform": "Apple Podcasts",
+      "count": 39663
+    },
+    {
+      "platform": "Spotify",
+      "count": 12229
+    },
+    {
+      "platform": "other",
+      "count": 3036
+    },
+    {
+      "platform": "Amazon Alexa",
+      "count": 1584
+    },
+    {
+      "platform": "iHeartRadio",
+      "count": 1555
+    },
+    {
+      "platform": "AppleCoreMedia",
+      "count": 1495
+    },
+    {
+      "platform": "Podcast Addict",
+      "count": 921
+    },
+    {
+      "platform": "Stagefright",
+      "count": 917
+    },
+    {
+      "platform": "JioSaavn",
+      "count": 728
+    },
+    {
+      "platform": "Audible",
+      "count": 264
+    },
+    {
+      "platform": "Chrome",
+      "count": 247
+    },
+    {
+      "platform": "Dalvik Android Audio Library",
+      "count": 245
+    },
+    {
+      "platform": "Amazon Music Podcasts",
+      "count": 228
+    },
+    {
+      "platform": "Castbox",
+      "count": 194
+    },
+    {
+      "platform": "Android / Java HTTP client library",
+      "count": 148
+    },
+    {
+      "platform": "Google Podcasts on smart speakers",
+      "count": 109
+    },
+    {
+      "platform": "iTunes desktop software",
+      "count": 107
+    },
+    {
+      "platform": "VictorReader",
+      "count": 88
+    },
+    {
+      "platform": "Pocket Casts",
+      "count": 65
+    },
+    {
+      "platform": "iVoox",
+      "count": 53
+    },
+    {
+      "platform": "TuneIn",
+      "count": 28
+    },
+    {
+      "platform": "Safari",
+      "count": 27
+    },
+    {
+      "platform": "Deezer",
+      "count": 23
+    },
+    {
+      "platform": "AntennaPod",
+      "count": 23
+    },
+    {
+      "platform": "Downcast",
+      "count": 19
+    },
+    {
+      "platform": "Podbean",
+      "count": 15
+    },
+    {
+      "platform": "Podcast Republic",
+      "count": 13
+    },
+    {
+      "platform": "Mozilla",
+      "count": 13
+    },
+    {
+      "platform": "DoggCatcher",
+      "count": 12
+    },
+    {
+      "platform": "BeyondPod",
+      "count": 12
+    },
+    {
+      "platform": "VLC Media Player",
+      "count": 9
+    },
+    {
+      "platform": "Firefox",
+      "count": 6
+    },
+    {
+      "platform": "Podcast Guru",
+      "count": 4
+    },
+    {
+      "platform": "double Twist CloudPlayer",
+      "count": 4
+    },
+    {
+      "platform": "Podimo",
+      "count": 4
+    },
+    {
+      "platform": "The Podcast App",
+      "count": 3
+    },
+    {
+      "platform": "iCatcher",
+      "count": 2
+    },
+    {
+      "platform": "Player FM",
+      "count": 2
+    },
+    {
+      "platform": "Roku",
+      "count": 2
+    },
+    {
+      "platform": "Bose",
+      "count": 2
+    },
+    {
+      "platform": "Windows Media Player",
+      "count": 1
+    },
+    {
+      "platform": "Google Podcasts on Android",
+      "count": 1
+    }
+  ],
+  "byDevice": [
+    {
+      "device": "iPhone",
+      "count": 38181
+    },
+    {
+      "device": "Android",
+      "count": 10411
+    },
+    {
+      "device": "Apple (Other)",
+      "count": 9859
+    },
+    {
+      "device": "Other",
+      "count": 3237
+    },
+    {
+      "device": "Smart Speaker",
+      "count": 1581
+    },
+    {
+      "device": "iPad",
+      "count": 353
+    },
+    {
+      "device": "Windows",
+      "count": 216
+    },
+    {
+      "device": "Linux",
+      "count": 169
+    },
+    {
+      "device": "Mac",
+      "count": 94
+    }
+  ],
+  "byDeviceCategory": [
+    {
+      "category": "iOS/macOS",
+      "count": 48470
+    },
+    {
+      "category": "Android",
+      "count": 10411
+    },
+    {
+      "category": "Other",
+      "count": 3254
+    },
+    {
+      "category": "Smart Speaker",
+      "count": 1581
+    },
+    {
+      "category": "Windows",
+      "count": 216
+    },
+    {
+      "category": "Linux",
+      "count": 169
+    }
+  ],
+  "byDMA": [
+    {
+      "dma": "Washington, DC (Hagerstown, MD)",
+      "count": 5410
+    },
+    {
+      "dma": "Seattle-Tacoma, WA",
+      "count": 2788
+    },
+    {
+      "dma": "New York, NY",
+      "count": 1065
+    },
+    {
+      "dma": "Los Angeles, CA",
+      "count": 793
+    },
+    {
+      "dma": "Detroit, MI",
+      "count": 610
+    },
+    {
+      "dma": "Chicago, IL",
+      "count": 460
+    },
+    {
+      "dma": "Philadelphia, PA",
+      "count": 423
+    },
+    {
+      "dma": "San Francisco-Oakland-San Jose, CA",
+      "count": 368
+    },
+    {
+      "dma": "Minneapolis-St. Paul, MN",
+      "count": 341
+    },
+    {
+      "dma": "Denver, CO",
+      "count": 326
+    },
+    {
+      "dma": "Boston, MA-Manchester, NH",
+      "count": 317
+    },
+    {
+      "dma": "Portland, OR",
+      "count": 310
+    },
+    {
+      "dma": "Atlanta, GA",
+      "count": 302
+    },
+    {
+      "dma": "Dallas-Ft. Worth, TX",
+      "count": 300
+    },
+    {
+      "dma": "Milwaukee, WI",
+      "count": 291
+    },
+    {
+      "dma": "Phoenix, AZ",
+      "count": 255
+    },
+    {
+      "dma": "Sacramento-Stockton-Modesto, CA",
+      "count": 240
+    },
+    {
+      "dma": "Houston, TX",
+      "count": 199
+    },
+    {
+      "dma": "Tampa-St Petersburg (Sarasota), FL",
+      "count": 194
+    },
+    {
+      "dma": "Charlotte, NC",
+      "count": 178
+    }
+  ],
+  "topPodcasts": [
+    {
+      "podcast_id": "463f567a-4d73-11f1-a8d2-9b2a0cabc983",
+      "title": "Poirot Investigates - Agatha Christie",
+      "category": "Animation & Manga",
+      "count": 2196,
+      "pct": "3.4"
+    },
+    {
+      "podcast_id": "4c153222-4d73-11f1-8fd7-53ba8fbf5b52",
+      "title": "Gunsmoke - Old Time Radio",
+      "category": "Fiction",
+      "count": 2074,
+      "pct": "3.2"
+    },
+    {
+      "podcast_id": "8f8694b8-4d8e-11f1-aa34-df8d86665ef2",
+      "title": "The Murder on the Link - Agatha Christie",
+      "category": "Books",
+      "count": 1542,
+      "pct": "2.4"
+    },
+    {
+      "podcast_id": "0468b402-4da6-11f1-8c8d-a73a1182f0e8",
+      "title": "Agatha Christie Radio Plays",
+      "category": "Books",
+      "count": 1268,
+      "pct": "2.0"
+    },
+    {
+      "podcast_id": "5174ff54-4d73-11f1-966b-6bae26900124",
+      "title": "Agatha Christie - Man in the Brown Suit",
+      "category": "Books",
+      "count": 928,
+      "pct": "1.4"
+    },
+    {
+      "podcast_id": "4ecbcdd2-4d73-11f1-bc46-3b096e938cd7",
+      "title": "Suspense - Old Time Radio",
+      "category": "Drama",
+      "count": 882,
+      "pct": "1.4"
+    },
+    {
+      "podcast_id": "8f9eed9c-4d8e-11f1-9aa2-47dc85dd28b5",
+      "title": "The Morning Person A Daily Meditation",
+      "category": "Mental Health",
+      "count": 801,
+      "pct": "1.2"
+    },
+    {
+      "podcast_id": "93a4902c-4d8e-11f1-8cc7-d744bb77c030",
+      "title": "The Secret Of Chimneys -Agatha Christie",
+      "category": "Books",
+      "count": 754,
+      "pct": "1.2"
+    },
+    {
+      "podcast_id": "936d04cc-4d8e-11f1-9e5a-2be5e6c06987",
+      "title": "Lights Out - Old Time Radio - OTR",
+      "category": "Performing Arts",
+      "count": 672,
+      "pct": "1.0"
+    },
+    {
+      "podcast_id": "8f823c9c-4d8e-11f1-b2a7-038f39328607",
+      "title": "The Secret Adversary by Agatha Christie",
+      "category": "Books",
+      "count": 665,
+      "pct": "1.0"
+    },
+    {
+      "podcast_id": "a296181c-4d8e-11f1-b4e3-8bf64a3b5281",
+      "title": "Quantum Computing 101",
+      "category": "Technology",
+      "count": 643,
+      "pct": "1.0"
+    },
+    {
+      "podcast_id": "878b33c2-4dac-11f1-a914-371fe8ba5dad",
+      "title": "Agatha Christie Secret of the Chimneys",
+      "category": "Books",
+      "count": 628,
+      "pct": "1.0"
+    },
+    {
+      "podcast_id": "8f9a0b74-4d8e-11f1-b024-8b2ec128d6c5",
+      "title": "Love Song",
+      "category": "Animation & Manga",
+      "count": 619,
+      "pct": "1.0"
+    },
+    {
+      "podcast_id": "4918b062-4d73-11f1-90fd-6731fa805f3d",
+      "title": "Jason and Travis Kelce-Football Brothers",
+      "category": "Football",
+      "count": 616,
+      "pct": "1.0"
+    },
+    {
+      "podcast_id": "9b67f97a-4d8e-11f1-a47c-e72f4fcfbcac",
+      "title": "Justin Bieber - Biography Flash",
+      "category": "Documentary",
+      "count": 616,
+      "pct": "1.0"
+    },
+    {
+      "podcast_id": "3a4cd756-4d88-11f1-b3d6-0feed8f2f625",
+      "title": "Dragnet Full Episodes",
+      "category": "TV & Film",
+      "count": 609,
+      "pct": "1.0"
+    },
+    {
+      "podcast_id": "6d8d3d52-4da3-11f1-8df2-a7d8b28cab02",
+      "title": "Daily Unusual Holiday",
+      "category": "Comedy",
+      "count": 516,
+      "pct": "0.8"
+    },
+    {
+      "podcast_id": "541bb810-4d73-11f1-8d5c-33a11a0dc9ed",
+      "title": "Nicholas Fuentes - Biography Flash",
+      "category": "History",
+      "count": 507,
+      "pct": "0.8"
+    },
+    {
+      "podcast_id": "9af8e7d8-4d8e-11f1-8cc7-4fdbc43e37d6",
+      "title": "The Big Four by Agatha Christie",
+      "category": "Books",
+      "count": 484,
+      "pct": "0.8"
+    },
+    {
+      "podcast_id": "9eb1c2dc-4d8e-11f1-9f12-b3c8631ad6d1",
+      "title": "Our Miss Brooks - Full Episodes",
+      "category": "TV & Film",
+      "count": 484,
+      "pct": "0.8"
+    },
+    {
+      "podcast_id": "f7bd3502-4d9b-11f1-af01-07dce9321252",
+      "title": "Music News Tracker",
+      "category": "Entertainment News",
+      "count": 477,
+      "pct": "0.7"
+    },
+    {
+      "podcast_id": "5efec632-4d73-11f1-92fe-1bfda7833087",
+      "title": "Richard Diamond, Private Detective, Old time Radio",
+      "category": "Performing Arts",
+      "count": 470,
+      "pct": "0.7"
+    },
+    {
+      "podcast_id": "2b5e91b4-4da4-11f1-a60c-170fe49cb18e",
+      "title": "Harris 2024 News and Info Tracker",
+      "category": "Daily News",
+      "count": 445,
+      "pct": "0.7"
+    },
+    {
+      "podcast_id": "8f78a254-4d8e-11f1-8aaf-d394742d8678",
+      "title": "John Oliver - Biography Flash",
+      "category": "Arts",
+      "count": 444,
+      "pct": "0.7"
+    },
+    {
+      "podcast_id": "6d74d580-4da5-11f1-8f19-7f8ed877c9e1",
+      "title": "Unexplained Phenomena Daily",
+      "category": "Science Fiction",
+      "count": 444,
+      "pct": "0.7"
+    },
+    {
+      "podcast_id": "b9876616-4d8e-11f1-a3d8-5bf50b6c0cf7",
+      "title": "How to Make Money",
+      "category": "Leisure",
+      "count": 431,
+      "pct": "0.7"
+    },
+    {
+      "podcast_id": "5d374b2c-4da4-11f1-8b58-bf7711f00b43",
+      "title": "Music History Daily",
+      "category": "Music History",
+      "count": 416,
+      "pct": "0.6"
+    },
+    {
+      "podcast_id": "09d9c5e4-4daa-11f1-95bc-2fd3c564f346",
+      "title": "Motivating Mantra Daily",
+      "category": "Mental Health",
+      "count": 403,
+      "pct": "0.6"
+    },
+    {
+      "podcast_id": "d7f07142-4d8e-11f1-9926-e36eecdec864",
+      "title": "Drone Technology Daily: UAV News & Reviews",
+      "category": "Technology",
+      "count": 389,
+      "pct": "0.6"
+    },
+    {
+      "podcast_id": "dbc9dbb4-4d8e-11f1-9e5d-bfe7297df0b5",
+      "title": "\"Mindful Moments: Daily Breathing Exercises for Relaxation\"",
+      "category": "Alternative Health",
+      "count": 382,
+      "pct": "0.6"
+    }
+  ],
+  "topEpisodes": [
+    {
+      "episode_id": "a1fcbd36-4d73-11f1-9cf2-eb48c7005cfb",
+      "podcast_id": "463f567a-4d73-11f1-a8d2-9b2a0cabc983",
+      "show": "Poirot Investigates - Agatha Christie",
+      "count": 1509,
+      "duration": 3922.44
+    },
+    {
+      "episode_id": "aafa883e-4e57-11f1-9fd0-77a046a2a120",
+      "podcast_id": "0468b402-4da6-11f1-8c8d-a73a1182f0e8",
+      "show": "Agatha Christie Radio Plays",
+      "count": 506,
+      "duration": 5214.96
+    },
+    {
+      "episode_id": "487ced32-4d8f-11f1-9b73-071e6f3ecc0d",
+      "podcast_id": "8f9a0b74-4d8e-11f1-b024-8b2ec128d6c5",
+      "show": "Love Song",
+      "count": 437,
+      "duration": 1556.24
+    },
+    {
+      "episode_id": "f3d22b5c-4e57-11f1-b99d-1f795355c054",
+      "podcast_id": "0468b402-4da6-11f1-8c8d-a73a1182f0e8",
+      "show": "Agatha Christie Radio Plays",
+      "count": 412,
+      "duration": 5305.78
+    },
+    {
+      "episode_id": "34577368-4e57-11f1-bb7d-c781d98e90b3",
+      "podcast_id": "0468b402-4da6-11f1-8c8d-a73a1182f0e8",
+      "show": "Agatha Christie Radio Plays",
+      "count": 320,
+      "duration": 1718.23
+    },
+    {
+      "episode_id": "bef0e91c-4d7d-11f1-b09a-ffa9101303bf",
+      "podcast_id": "4c153222-4d73-11f1-8fd7-53ba8fbf5b52",
+      "show": "Gunsmoke - Old Time Radio",
+      "count": 313,
+      "duration": 1522.89
+    },
+    {
+      "episode_id": "a1f9b03c-4d73-11f1-98b7-57b9efca33f0",
+      "podcast_id": "463f567a-4d73-11f1-a8d2-9b2a0cabc983",
+      "show": "Poirot Investigates - Agatha Christie",
+      "count": 264,
+      "duration": 4043.99
+    },
+    {
+      "episode_id": "2c8b41f6-4d7f-11f1-b110-9b4488b5c2b5",
+      "podcast_id": "5174ff54-4d73-11f1-966b-6bae26900124",
+      "show": "Agatha Christie - Man in the Brown Suit",
+      "count": 249,
+      "duration": 5482.71
+    },
+    {
+      "episode_id": "6d112dd4-4de4-11f1-86df-7b3ee025be1b",
+      "podcast_id": "8f8694b8-4d8e-11f1-aa34-df8d86665ef2",
+      "show": "The Murder on the Link - Agatha Christie",
+      "count": 241,
+      "duration": 2360.82
+    },
+    {
+      "episode_id": "322140f8-4d74-11f1-8661-cf07ffd516e4",
+      "podcast_id": "5174ff54-4d73-11f1-966b-6bae26900124",
+      "show": "Agatha Christie - Man in the Brown Suit",
+      "count": 210,
+      "duration": 5907.83
+    },
+    {
+      "episode_id": "2e29436c-4d90-11f1-b2ea-d7de7a040979",
+      "podcast_id": "9af8e7d8-4d8e-11f1-8cc7-4fdbc43e37d6",
+      "show": "The Big Four by Agatha Christie",
+      "count": 182,
+      "duration": 5218.12
+    },
+    {
+      "episode_id": "6bd50530-4de4-11f1-b981-33467ea8bf9c",
+      "podcast_id": "93a4902c-4d8e-11f1-8cc7-d744bb77c030",
+      "show": "The Secret Of Chimneys -Agatha Christie",
+      "count": 171,
+      "duration": 3752.88
+    },
+    {
+      "episode_id": "1a0acf4e-4d91-11f1-8065-ff0297684b64",
+      "podcast_id": "8f8694b8-4d8e-11f1-aa34-df8d86665ef2",
+      "show": "The Murder on the Link - Agatha Christie",
+      "count": 169,
+      "duration": 2240.03
+    },
+    {
+      "episode_id": "e831e7e0-4d91-11f1-a73e-57820786ccf4",
+      "podcast_id": "9af8e7d8-4d8e-11f1-8cc7-4fdbc43e37d6",
+      "show": "The Big Four by Agatha Christie",
+      "count": 169,
+      "duration": 3715.03
+    },
+    {
+      "episode_id": "448b3da0-4d8f-11f1-a117-a36618b27dcc",
+      "podcast_id": "8f823c9c-4d8e-11f1-b2a7-038f39328607",
+      "show": "The Secret Adversary by Agatha Christie",
+      "count": 164,
+      "duration": 5107.04
+    },
+    {
+      "episode_id": "44e82dee-4d8f-11f1-8080-bfc77f989b3d",
+      "podcast_id": "8f823c9c-4d8e-11f1-b2a7-038f39328607",
+      "show": "The Secret Adversary by Agatha Christie",
+      "count": 164,
+      "duration": 5937.14
+    },
+    {
+      "episode_id": "324665cc-4d74-11f1-894d-5364b3e98c72",
+      "podcast_id": "5174ff54-4d73-11f1-966b-6bae26900124",
+      "show": "Agatha Christie - Man in the Brown Suit",
+      "count": 157,
+      "duration": 6306.38
+    },
+    {
+      "episode_id": "324437fc-4d74-11f1-9f64-d7877457a8c0",
+      "podcast_id": "5174ff54-4d73-11f1-966b-6bae26900124",
+      "show": "Agatha Christie - Man in the Brown Suit",
+      "count": 156,
+      "duration": 4879.44
+    },
+    {
+      "episode_id": "31f4eecc-4d74-11f1-ac14-3307c431ef55",
+      "podcast_id": "463f567a-4d73-11f1-a8d2-9b2a0cabc983",
+      "show": "Poirot Investigates - Agatha Christie",
+      "count": 156,
+      "duration": 4251.19
+    },
+    {
+      "episode_id": "326907da-4d74-11f1-a0fe-dbe13c65bd55",
+      "podcast_id": "5174ff54-4d73-11f1-966b-6bae26900124",
+      "show": "Agatha Christie - Man in the Brown Suit",
+      "count": 156,
+      "duration": 6175.03
+    },
+    {
+      "episode_id": "81e8de46-4d7b-11f1-a75e-fb45800642a1",
+      "podcast_id": "4918b062-4d73-11f1-90fd-6731fa805f3d",
+      "show": "Jason and Travis Kelce-Football Brothers",
+      "count": 155,
+      "duration": 348.66
+    },
+    {
+      "episode_id": "2de12da2-4d90-11f1-a68e-b7f6a293a012",
+      "podcast_id": "8f8694b8-4d8e-11f1-aa34-df8d86665ef2",
+      "show": "The Murder on the Link - Agatha Christie",
+      "count": 148,
+      "duration": 2163.51
+    },
+    {
+      "episode_id": "5e4a2f94-4e5c-11f1-88d3-d75b023fe420",
+      "podcast_id": "964bc1c8-4d9e-11f1-8906-1bda15a7152b",
+      "show": "Agatha Christie's - Poirot Investigates",
+      "count": 146,
+      "duration": 1045.81
+    },
+    {
+      "episode_id": "0afb1324-4d91-11f1-997c-63886c42a5b9",
+      "podcast_id": "8f8694b8-4d8e-11f1-aa34-df8d86665ef2",
+      "show": "The Murder on the Link - Agatha Christie",
+      "count": 145,
+      "duration": 2204.71
+    },
+    {
+      "episode_id": "0156213e-4e58-11f1-94ac-97c10a2879ec",
+      "podcast_id": "878b33c2-4dac-11f1-a914-371fe8ba5dad",
+      "show": "Agatha Christie Secret of the Chimneys",
+      "count": 143,
+      "duration": 4504.82
+    },
+    {
+      "episode_id": "988ce614-4d7c-11f1-9079-7b5568257a1b",
+      "podcast_id": "4c153222-4d73-11f1-8fd7-53ba8fbf5b52",
+      "show": "Gunsmoke - Old Time Radio",
+      "count": 142,
+      "duration": 1411.81
+    },
+    {
+      "episode_id": "c89de90c-4d7c-11f1-84ad-57c40f820e37",
+      "podcast_id": "541bb810-4d73-11f1-8d5c-33a11a0dc9ed",
+      "show": "Nicholas Fuentes - Biography Flash",
+      "count": 141,
+      "duration": 134.24
+    },
+    {
+      "episode_id": "31fe07f0-4d74-11f1-ab9e-478e170e07fa",
+      "podcast_id": "463f567a-4d73-11f1-a8d2-9b2a0cabc983",
+      "show": "Poirot Investigates - Agatha Christie",
+      "count": 137,
+      "duration": 4195.13
+    },
+    {
+      "episode_id": "0d32a09e-4e8b-11f1-a3e2-f3963433cd6a",
+      "podcast_id": "c80d2188-4d9f-11f1-b535-e3099f2bf418",
+      "show": "Suspense! Old Time Radio Show!",
+      "count": 133,
+      "duration": 1615.93
+    },
+    {
+      "episode_id": "094ee426-4d9e-11f1-980d-6be30206c3bc",
+      "podcast_id": "8f78a254-4d8e-11f1-8aaf-d394742d8678",
+      "show": "John Oliver - Biography Flash",
+      "count": 132,
+      "duration": 130.48
+    }
+  ],
+  "hourlyDistribution": [
+    {
+      "hour": 0,
+      "count": 1338
+    },
+    {
+      "hour": 1,
+      "count": 1969
+    },
+    {
+      "hour": 2,
+      "count": 2668
+    },
+    {
+      "hour": 3,
+      "count": 2574
+    },
+    {
+      "hour": 4,
+      "count": 2430
+    },
+    {
+      "hour": 5,
+      "count": 2983
+    },
+    {
+      "hour": 6,
+      "count": 2908
+    },
+    {
+      "hour": 7,
+      "count": 2373
+    },
+    {
+      "hour": 8,
+      "count": 2932
+    },
+    {
+      "hour": 9,
+      "count": 1963
+    },
+    {
+      "hour": 10,
+      "count": 2219
+    },
+    {
+      "hour": 11,
+      "count": 3325
+    },
+    {
+      "hour": 12,
+      "count": 4188
+    },
+    {
+      "hour": 13,
+      "count": 4171
+    },
+    {
+      "hour": 14,
+      "count": 4449
+    },
+    {
+      "hour": 15,
+      "count": 5670
+    },
+    {
+      "hour": 16,
+      "count": 5732
+    },
+    {
+      "hour": 17,
+      "count": 3665
+    },
+    {
+      "hour": 18,
+      "count": 758
+    },
+    {
+      "hour": 19,
+      "count": 688
+    },
+    {
+      "hour": 20,
+      "count": 999
+    },
+    {
+      "hour": 21,
+      "count": 1364
+    },
+    {
+      "hour": 22,
+      "count": 855
+    },
+    {
+      "hour": 23,
+      "count": 1880
+    }
+  ],
+  "impressionsByType": {
+    "pre": 14586,
+    "mid": 15659,
+    "post": 13981,
+    "other": 0
+  },
+  "impressionsBySource": {
+    "auto": 44226
+  },
+  "geoBreakdown": [
+    {
+      "country": "US",
+      "total": 47775,
+      "regions": [
+        {
+          "region": "Unknown",
+          "count": 25797
+        },
+        {
+          "region": "VA",
+          "count": 5519
+        },
+        {
+          "region": "WA",
+          "count": 2997
+        },
+        {
+          "region": "CA",
+          "count": 1790
+        },
+        {
+          "region": "NY",
+          "count": 1028
+        },
+        {
+          "region": "TX",
+          "count": 845
+        },
+        {
+          "region": "MI",
+          "count": 757
+        },
+        {
+          "region": "FL",
+          "count": 639
+        },
+        {
+          "region": "PA",
+          "count": 547
+        },
+        {
+          "region": "IL",
+          "count": 521
+        }
+      ]
+    },
+    {
+      "country": "GB",
+      "total": 3444,
+      "regions": [
+        {
+          "region": "ENG",
+          "count": 2709
+        },
+        {
+          "region": "SCT",
+          "count": 334
+        },
+        {
+          "region": "Unknown",
+          "count": 230
+        },
+        {
+          "region": "WLS",
+          "count": 121
+        },
+        {
+          "region": "NIR",
+          "count": 50
+        }
+      ]
+    },
+    {
+      "country": "CA",
+      "total": 3087,
+      "regions": [
+        {
+          "region": "ON",
+          "count": 1320
+        },
+        {
+          "region": "BC",
+          "count": 827
+        },
+        {
+          "region": "AB",
+          "count": 427
+        },
+        {
+          "region": "SK",
+          "count": 166
+        },
+        {
+          "region": "QC",
+          "count": 162
+        },
+        {
+          "region": "MB",
+          "count": 61
+        },
+        {
+          "region": "NS",
+          "count": 58
+        },
+        {
+          "region": "NB",
+          "count": 42
+        },
+        {
+          "region": "PE",
+          "count": 12
+        },
+        {
+          "region": "NL",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "country": "IN",
+      "total": 1277,
+      "regions": [
+        {
+          "region": "MH",
+          "count": 188
+        },
+        {
+          "region": "KA",
+          "count": 110
+        },
+        {
+          "region": "DL",
+          "count": 103
+        },
+        {
+          "region": "MP",
+          "count": 95
+        },
+        {
+          "region": "UP",
+          "count": 88
+        },
+        {
+          "region": "TN",
+          "count": 83
+        },
+        {
+          "region": "GJ",
+          "count": 79
+        },
+        {
+          "region": "BR",
+          "count": 63
+        },
+        {
+          "region": "TS",
+          "count": 63
+        },
+        {
+          "region": "WB",
+          "count": 58
+        }
+      ]
+    },
+    {
+      "country": "AU",
+      "total": 1222,
+      "regions": [
+        {
+          "region": "NSW",
+          "count": 357
+        },
+        {
+          "region": "VIC",
+          "count": 332
+        },
+        {
+          "region": "QLD",
+          "count": 247
+        },
+        {
+          "region": "WA",
+          "count": 151
+        },
+        {
+          "region": "SA",
+          "count": 105
+        },
+        {
+          "region": "TAS",
+          "count": 17
+        },
+        {
+          "region": "ACT",
+          "count": 8
+        },
+        {
+          "region": "Unknown",
+          "count": 3
+        },
+        {
+          "region": "NT",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "country": "DE",
+      "total": 749,
+      "regions": [
+        {
+          "region": "BY",
+          "count": 176
+        },
+        {
+          "region": "BW",
+          "count": 124
+        },
+        {
+          "region": "HE",
+          "count": 86
+        },
+        {
+          "region": "BE",
+          "count": 86
+        },
+        {
+          "region": "NW",
+          "count": 83
+        },
+        {
+          "region": "NI",
+          "count": 51
+        },
+        {
+          "region": "RP",
+          "count": 31
+        },
+        {
+          "region": "SN",
+          "count": 29
+        },
+        {
+          "region": "SH",
+          "count": 28
+        },
+        {
+          "region": "HH",
+          "count": 22
+        }
+      ]
+    },
+    {
+      "country": "KR",
+      "total": 363,
+      "regions": [
+        {
+          "region": "41",
+          "count": 335
+        },
+        {
+          "region": "11",
+          "count": 11
+        },
+        {
+          "region": "43",
+          "count": 10
+        },
+        {
+          "region": "Unknown",
+          "count": 2
+        },
+        {
+          "region": "26",
+          "count": 1
+        },
+        {
+          "region": "31",
+          "count": 1
+        },
+        {
+          "region": "42",
+          "count": 1
+        },
+        {
+          "region": "47",
+          "count": 1
+        },
+        {
+          "region": "49",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "country": "ZA",
+      "total": 355,
+      "regions": [
+        {
+          "region": "GP",
+          "count": 245
+        },
+        {
+          "region": "WC",
+          "count": 68
+        },
+        {
+          "region": "KZN",
+          "count": 25
+        },
+        {
+          "region": "EC",
+          "count": 6
+        },
+        {
+          "region": "LP",
+          "count": 4
+        },
+        {
+          "region": "Unknown",
+          "count": 2
+        },
+        {
+          "region": "NW",
+          "count": 2
+        },
+        {
+          "region": "NC",
+          "count": 1
+        },
+        {
+          "region": "MP",
+          "count": 1
+        },
+        {
+          "region": "FS",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "country": "NZ",
+      "total": 354,
+      "regions": [
+        {
+          "region": "AUK",
+          "count": 100
+        },
+        {
+          "region": "CAN",
+          "count": 92
+        },
+        {
+          "region": "WGN",
+          "count": 51
+        },
+        {
+          "region": "Unknown",
+          "count": 48
+        },
+        {
+          "region": "WKO",
+          "count": 21
+        },
+        {
+          "region": "HKB",
+          "count": 12
+        },
+        {
+          "region": "NSN",
+          "count": 9
+        },
+        {
+          "region": "MWT",
+          "count": 9
+        },
+        {
+          "region": "OTA",
+          "count": 7
+        },
+        {
+          "region": "BOP",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "country": "IE",
+      "total": 343,
+      "regions": [
+        {
+          "region": "L",
+          "count": 218
+        },
+        {
+          "region": "Unknown",
+          "count": 56
+        },
+        {
+          "region": "C",
+          "count": 39
+        },
+        {
+          "region": "M",
+          "count": 27
+        },
+        {
+          "region": "U",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "country": "NL",
+      "total": 310,
+      "regions": [
+        {
+          "region": "NH",
+          "count": 148
+        },
+        {
+          "region": "ZH",
+          "count": 55
+        },
+        {
+          "region": "Unknown",
+          "count": 25
+        },
+        {
+          "region": "UT",
+          "count": 23
+        },
+        {
+          "region": "NB",
+          "count": 20
+        },
+        {
+          "region": "GE",
+          "count": 15
+        },
+        {
+          "region": "LI",
+          "count": 7
+        },
+        {
+          "region": "FL",
+          "count": 6
+        },
+        {
+          "region": "OV",
+          "count": 4
+        },
+        {
+          "region": "GR",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "country": "FR",
+      "total": 279,
+      "regions": [
+        {
+          "region": "IDF",
+          "count": 91
+        },
+        {
+          "region": "PAC",
+          "count": 38
+        },
+        {
+          "region": "ARA",
+          "count": 34
+        },
+        {
+          "region": "NAQ",
+          "count": 33
+        },
+        {
+          "region": "Unknown",
+          "count": 22
+        },
+        {
+          "region": "HDF",
+          "count": 17
+        },
+        {
+          "region": "GES",
+          "count": 13
+        },
+        {
+          "region": "OCC",
+          "count": 9
+        },
+        {
+          "region": "BFC",
+          "count": 9
+        },
+        {
+          "region": "NOR",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "country": "ES",
+      "total": 244,
+      "regions": [
+        {
+          "region": "MD",
+          "count": 84
+        },
+        {
+          "region": "VC",
+          "count": 58
+        },
+        {
+          "region": "CT",
+          "count": 31
+        },
+        {
+          "region": "AN",
+          "count": 30
+        },
+        {
+          "region": "PV",
+          "count": 15
+        },
+        {
+          "region": "Unknown",
+          "count": 6
+        },
+        {
+          "region": "MC",
+          "count": 5
+        },
+        {
+          "region": "GA",
+          "count": 4
+        },
+        {
+          "region": "AR",
+          "count": 4
+        },
+        {
+          "region": "CN",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "country": "PH",
+      "total": 238,
+      "regions": [
+        {
+          "region": "00",
+          "count": 101
+        },
+        {
+          "region": "07",
+          "count": 69
+        },
+        {
+          "region": "03",
+          "count": 21
+        },
+        {
+          "region": "08",
+          "count": 16
+        },
+        {
+          "region": "10",
+          "count": 11
+        },
+        {
+          "region": "40",
+          "count": 7
+        },
+        {
+          "region": "06",
+          "count": 3
+        },
+        {
+          "region": "11",
+          "count": 2
+        },
+        {
+          "region": "01",
+          "count": 2
+        },
+        {
+          "region": "02",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "country": "MX",
+      "total": 234,
+      "regions": [
+        {
+          "region": "CMX",
+          "count": 54
+        },
+        {
+          "region": "JAL",
+          "count": 28
+        },
+        {
+          "region": "NLE",
+          "count": 17
+        },
+        {
+          "region": "VER",
+          "count": 17
+        },
+        {
+          "region": "PUE",
+          "count": 16
+        },
+        {
+          "region": "MEX",
+          "count": 13
+        },
+        {
+          "region": "COA",
+          "count": 11
+        },
+        {
+          "region": "QUE",
+          "count": 8
+        },
+        {
+          "region": "Unknown",
+          "count": 8
+        },
+        {
+          "region": "ROO",
+          "count": 7
+        }
+      ]
+    }
+  ]
+}
