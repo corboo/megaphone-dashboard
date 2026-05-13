@@ -1,5 +1,7 @@
 'use client';
 
+import ExpandableList from '../ExpandableList';
+
 interface Episode {
   episode_id: string;
   podcast_id: string;
@@ -23,7 +25,9 @@ export default function TopEpisodesTable({ episodes }: { episodes: Episode[] }) 
   return (
     <div className="bg-[#12121f] rounded-xl border border-[#1e1e35] p-5">
       <h2 className="text-lg font-semibold mb-1">Top Episodes by Downloads</h2>
-      <p className="text-[#6b6b80] text-sm mb-4">Most downloaded individual episodes</p>
+      <p className="text-[#6b6b80] text-sm mb-4">
+        {episodes.length.toLocaleString()} episodes · Most downloaded individual episodes
+      </p>
       <div className="overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
@@ -36,37 +40,47 @@ export default function TopEpisodesTable({ episodes }: { episodes: Episode[] }) 
               <th className="p-2 text-[#6b6b80] font-medium w-32"></th>
             </tr>
           </thead>
-          <tbody>
-            {episodes.slice(0, 20).map((ep, i) => (
-              <tr
-                key={ep.episode_id}
-                className="border-b border-[#1e1e35]/50 hover:bg-[#1a1a2e] transition-colors"
-              >
-                <td className="p-2 text-[#6b6b80]">{i + 1}</td>
-                <td className="p-2 font-mono text-xs max-w-[200px] truncate text-[#3B82F6]" title={ep.episode_id}>
-                  {ep.episode_id.slice(0, 8)}…
-                </td>
-                <td className="p-2 font-medium max-w-[300px] truncate" title={ep.show}>
-                  {ep.show}
-                </td>
-                <td className="p-2 text-right text-[#6b6b80] text-xs">
-                  {formatDuration(ep.duration)}
-                </td>
-                <td className="p-2 text-right font-mono text-[#D4A847]">
-                  {ep.count.toLocaleString()}
-                </td>
-                <td className="p-2">
-                  <div className="w-full h-2 bg-[#1e1e35] rounded-full overflow-hidden">
-                    <div
-                      className="h-full rounded-full bg-[#3B82F6]"
-                      style={{ width: `${(ep.count / maxCount) * 100}%` }}
-                    />
-                  </div>
-                </td>
-              </tr>
-            ))}
-          </tbody>
         </table>
+        <ExpandableList
+          items={episodes}
+          defaultLimit={20}
+          stepLimit={50}
+          label="episodes"
+          renderItems={(visibleItems) => (
+            <table className="w-full text-sm">
+              <tbody>
+                {visibleItems.map((ep, i) => (
+                  <tr
+                    key={ep.episode_id}
+                    className="border-b border-[#1e1e35]/50 hover:bg-[#1a1a2e] transition-colors"
+                  >
+                    <td className="p-2 text-[#6b6b80] w-10">{episodes.indexOf(ep) + 1}</td>
+                    <td className="p-2 font-mono text-xs max-w-[200px] truncate text-[#3B82F6]" title={ep.episode_id}>
+                      {ep.episode_id.slice(0, 8)}…
+                    </td>
+                    <td className="p-2 font-medium max-w-[300px] truncate" title={ep.show}>
+                      {ep.show}
+                    </td>
+                    <td className="p-2 text-right text-[#6b6b80] text-xs">
+                      {formatDuration(ep.duration)}
+                    </td>
+                    <td className="p-2 text-right font-mono text-[#D4A847]">
+                      {ep.count.toLocaleString()}
+                    </td>
+                    <td className="p-2 w-32">
+                      <div className="w-full h-2 bg-[#1e1e35] rounded-full overflow-hidden">
+                        <div
+                          className="h-full rounded-full bg-[#3B82F6]"
+                          style={{ width: `${(ep.count / maxCount) * 100}%` }}
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+        />
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import {
   BarChart,
   Bar,
@@ -10,44 +11,27 @@ import {
   ResponsiveContainer,
   Cell,
 } from 'recharts';
+import ExpandableList from '../ExpandableList';
 
 interface Props {
   data: { country: string; count: number }[];
 }
 
 const COUNTRY_NAMES: Record<string, string> = {
-  US: '🇺🇸 United States',
-  GB: '🇬🇧 United Kingdom',
-  CA: '🇨🇦 Canada',
-  IN: '🇮🇳 India',
-  AU: '🇦🇺 Australia',
-  DE: '🇩🇪 Germany',
-  KR: '🇰🇷 South Korea',
-  ZA: '🇿🇦 South Africa',
-  NZ: '🇳🇿 New Zealand',
-  IE: '🇮🇪 Ireland',
-  BR: '🇧🇷 Brazil',
-  PH: '🇵🇭 Philippines',
-  MX: '🇲🇽 Mexico',
-  FR: '🇫🇷 France',
-  SG: '🇸🇬 Singapore',
-  JP: '🇯🇵 Japan',
-  SE: '🇸🇪 Sweden',
-  NL: '🇳🇱 Netherlands',
-  NG: '🇳🇬 Nigeria',
-  KE: '🇰🇪 Kenya',
-  IT: '🇮🇹 Italy',
-  ES: '🇪🇸 Spain',
-  PK: '🇵🇰 Pakistan',
-  MY: '🇲🇾 Malaysia',
-  NO: '🇳🇴 Norway',
-  DK: '🇩🇰 Denmark',
-  FI: '🇫🇮 Finland',
-  CH: '🇨🇭 Switzerland',
-  AT: '🇦🇹 Austria',
-  HK: '🇭🇰 Hong Kong',
-  TW: '🇹🇼 Taiwan',
-  TH: '🇹🇭 Thailand',
+  US: '🇺🇸 United States', GB: '🇬🇧 United Kingdom', CA: '🇨🇦 Canada',
+  IN: '🇮🇳 India', AU: '🇦🇺 Australia', DE: '🇩🇪 Germany',
+  KR: '🇰🇷 South Korea', ZA: '🇿🇦 South Africa', NZ: '🇳🇿 New Zealand',
+  IE: '🇮🇪 Ireland', BR: '🇧🇷 Brazil', PH: '🇵🇭 Philippines',
+  MX: '🇲🇽 Mexico', FR: '🇫🇷 France', SG: '🇸🇬 Singapore',
+  JP: '🇯🇵 Japan', SE: '🇸🇪 Sweden', NL: '🇳🇱 Netherlands',
+  NG: '🇳🇬 Nigeria', KE: '🇰🇪 Kenya', IT: '🇮🇹 Italy',
+  ES: '🇪🇸 Spain', PK: '🇵🇰 Pakistan', MY: '🇲🇾 Malaysia',
+  NO: '🇳🇴 Norway', DK: '🇩🇰 Denmark', FI: '🇫🇮 Finland',
+  CH: '🇨🇭 Switzerland', AT: '🇦🇹 Austria', HK: '🇭🇰 Hong Kong',
+  TW: '🇹🇼 Taiwan', TH: '🇹🇭 Thailand', CN: '🇨🇳 China',
+  BE: '🇧🇪 Belgium', RU: '🇷🇺 Russia', PL: '🇵🇱 Poland',
+  IL: '🇮🇱 Israel', AE: '🇦🇪 UAE', AR: '🇦🇷 Argentina',
+  CL: '🇨🇱 Chile', CO: '🇨🇴 Colombia', PT: '🇵🇹 Portugal',
 };
 
 const COLORS = [
@@ -57,6 +41,9 @@ const COLORS = [
 ];
 
 export default function CountryChart({ data }: Props) {
+  const [showList, setShowList] = useState(false);
+  const total = data.reduce((s, d) => s + d.count, 0);
+
   const chartData = data.slice(0, 15).map((d) => ({
     ...d,
     name: COUNTRY_NAMES[d.country] || d.country,
@@ -65,30 +52,71 @@ export default function CountryChart({ data }: Props) {
 
   return (
     <div className="bg-[#12121f] rounded-xl border border-[#1e1e35] p-5">
-      <h2 className="text-lg font-semibold mb-1">Downloads by Country</h2>
-      <p className="text-[#6b6b80] text-sm mb-4">Top 15 countries by download count</p>
-      <div className="h-[400px]">
-        <ResponsiveContainer width="100%" height="100%">
-          <BarChart
-            data={chartData}
-            layout="vertical"
-            margin={{ top: 5, right: 20, left: 120, bottom: 5 }}
+      <div className="flex items-center justify-between mb-1">
+        <h2 className="text-lg font-semibold">Downloads by Country</h2>
+        {data.length > 15 && (
+          <button
+            onClick={() => setShowList(!showList)}
+            className="text-xs text-[#D4A847] hover:text-[#c49a3f] transition-colors"
           >
-            <CartesianGrid strokeDasharray="3 3" stroke="#1e1e35" horizontal={false} />
-            <XAxis type="number" stroke="#6b6b80" fontSize={11} tickFormatter={(v: number) => v >= 1000 ? `${(v / 1000).toFixed(0)}K` : `${v}`} />
-            <YAxis dataKey="name" type="category" stroke="#6b6b80" fontSize={11} width={110} />
-            <Tooltip
-              contentStyle={{ background: '#12121f', border: '1px solid #1e1e35', borderRadius: 8 }}
-              formatter={(value: number) => [value.toLocaleString(), 'Downloads']}
-            />
-            <Bar dataKey="count" radius={[0, 4, 4, 0]}>
-              {chartData.map((_, i) => (
-                <Cell key={i} fill={COLORS[i % COLORS.length]} />
-              ))}
-            </Bar>
-          </BarChart>
-        </ResponsiveContainer>
+            {showList ? 'Show Chart' : `All ${data.length} countries ↓`}
+          </button>
+        )}
       </div>
+      <p className="text-[#6b6b80] text-sm mb-4">
+        {data.length.toLocaleString()} countries · {total.toLocaleString()} downloads
+      </p>
+
+      {!showList ? (
+        <div className="h-[400px]">
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart
+              data={chartData}
+              layout="vertical"
+              margin={{ top: 5, right: 20, left: 120, bottom: 5 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" stroke="#1e1e35" horizontal={false} />
+              <XAxis type="number" stroke="#6b6b80" fontSize={11} tickFormatter={(v: number) => v >= 1000 ? `${(v / 1000).toFixed(0)}K` : `${v}`} />
+              <YAxis dataKey="name" type="category" stroke="#6b6b80" fontSize={11} width={110} />
+              <Tooltip
+                contentStyle={{ background: '#12121f', border: '1px solid #1e1e35', borderRadius: 8 }}
+                formatter={(value: number) => [value.toLocaleString(), 'Downloads']}
+              />
+              <Bar dataKey="count" radius={[0, 4, 4, 0]}>
+                {chartData.map((_, i) => (
+                  <Cell key={i} fill={COLORS[i % COLORS.length]} />
+                ))}
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+      ) : (
+        <ExpandableList
+          items={data}
+          defaultLimit={20}
+          stepLimit={50}
+          label="countries"
+          renderItems={(visibleItems) => (
+            <div className="space-y-1.5 max-h-[400px] overflow-y-auto">
+              {visibleItems.map((d) => {
+                const pct = total > 0 ? ((d.count / total) * 100).toFixed(1) : '0';
+                const name = COUNTRY_NAMES[d.country] || d.country;
+                const rank = data.indexOf(d) + 1;
+                return (
+                  <div key={d.country} className="flex items-center gap-2">
+                    <span className="text-[#6b6b80] text-xs w-6 text-right flex-shrink-0">{rank}</span>
+                    <span className="text-sm flex-1 truncate">{name}</span>
+                    <span className="text-xs text-[#6b6b80] flex-shrink-0">{pct}%</span>
+                    <span className="text-xs font-mono text-[#D4A847] w-16 text-right flex-shrink-0">
+                      {d.count.toLocaleString()}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        />
+      )}
     </div>
   );
 }

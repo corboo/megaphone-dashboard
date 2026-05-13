@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import {
   BarChart,
   Bar,
@@ -9,6 +10,7 @@ import {
   ResponsiveContainer,
   Cell,
 } from 'recharts';
+import ShowMoreToggle from '@/components/ui/ShowMoreToggle';
 
 interface Category {
   name: string;
@@ -22,15 +24,18 @@ const COLORS = [
   '#60A5FA', '#b08d35', '#93C5FD', '#D4A847', '#3B82F6',
 ];
 
+const DEFAULT_VISIBLE = 20;
+
 export default function CategoryBreakdown({ categories }: { categories: Category[] }) {
-  const top20 = categories.slice(0, 20);
+  const [visibleCount, setVisibleCount] = useState(DEFAULT_VISIBLE);
+  const visible = categories.slice(0, visibleCount);
 
   return (
     <div className="bg-[#12121f] rounded-xl border border-[#1e1e35] p-5">
-      <h2 className="text-lg font-semibold mb-4">Top 20 Categories</h2>
-      <div className="h-[500px]">
+      <h2 className="text-lg font-semibold mb-4">Top {Math.min(visibleCount, categories.length)} Categories</h2>
+      <div style={{ height: Math.max(400, visible.length * 25) }}>
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={top20} layout="vertical" margin={{ left: 120, right: 20, top: 5, bottom: 5 }}>
+          <BarChart data={visible} layout="vertical" margin={{ left: 120, right: 20, top: 5, bottom: 5 }}>
             <XAxis type="number" stroke="#6b6b80" fontSize={12} />
             <YAxis
               type="category"
@@ -47,13 +52,19 @@ export default function CategoryBreakdown({ categories }: { categories: Category
               formatter={(value: number) => [value.toLocaleString(), 'Shows']}
             />
             <Bar dataKey="count" radius={[0, 4, 4, 0]}>
-              {top20.map((_, i) => (
+              {visible.map((_, i) => (
                 <Cell key={i} fill={COLORS[i % COLORS.length]} />
               ))}
             </Bar>
           </BarChart>
         </ResponsiveContainer>
       </div>
+      <ShowMoreToggle
+        total={categories.length}
+        visible={visibleCount}
+        onShowMore={() => setVisibleCount(categories.length)}
+        onShowLess={() => setVisibleCount(DEFAULT_VISIBLE)}
+      />
     </div>
   );
 }
