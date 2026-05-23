@@ -11,12 +11,14 @@ interface Props {
     uniqueEpisodes: number;
     uniqueCountries: number;
     uniquePlatforms: number;
+    spotifyFollowers?: number;
   };
 }
 
 const cards = [
   { key: 'totalDownloads', label: 'Total Downloads', color: '#D4A847' },
   { key: 'totalImpressions', label: 'Ad Impressions', color: '#3B82F6' },
+  { key: 'spotifyFollowers', label: 'Spotify Followers', color: '#1DB954', icon: '🎧' },
   { key: 'avgDailyDownloads', label: 'Avg Daily Downloads', color: '#D4A847' },
   { key: 'uniqueCountries', label: 'Countries Reached', color: '#3B82F6' },
   { key: 'uniquePodcasts', label: 'Active Shows', color: '#D4A847' },
@@ -26,9 +28,16 @@ const cards = [
 ];
 
 export default function AnalyticsOverview({ summary }: Props) {
+  const visibleCards = cards.filter((card) => {
+    if (card.key === 'spotifyFollowers') {
+      return (summary.spotifyFollowers ?? 0) > 0;
+    }
+    return true;
+  });
+
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-4">
-      {cards.map((card) => {
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
+      {visibleCards.map((card) => {
         const val = summary[card.key as keyof Props['summary']];
         const display = card.suffix
           ? `${val}${card.suffix}`
@@ -41,7 +50,9 @@ export default function AnalyticsOverview({ summary }: Props) {
             className="bg-[#12121f] rounded-xl border border-[#1e1e35] p-4 hover:border-[#D4A847]/20 transition-colors"
           >
             <div className="flex items-center justify-between mb-2">
-              <span className="text-[#6b6b80] text-xs font-medium">{card.label}</span>
+              <span className="text-[#6b6b80] text-xs font-medium">
+                {(card as any).icon ? `${(card as any).icon} ` : ''}{card.label}
+              </span>
             </div>
             <div className="text-2xl font-bold" style={{ color: card.color }}>
               {display}

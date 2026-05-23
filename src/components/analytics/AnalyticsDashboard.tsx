@@ -13,6 +13,7 @@ import AdImpressionsSummary from './AdImpressionsSummary';
 import GeoBreakdown from './GeoBreakdown';
 import AnalyticsOverview from './AnalyticsOverview';
 import DateRangePicker from './DateRangePicker';
+import CategoryAnalysis from './CategoryAnalysis';
 import Link from 'next/link';
 
 // Per-day data shape
@@ -52,6 +53,7 @@ export interface AnalyticsData {
     uniqueEpisodes: number;
     uniqueCountries: number;
     uniquePlatforms: number;
+    spotifyFollowers?: number;
   };
   dailyDownloads: { date: string; count: number }[];
   dailyImpressions: { date: string; count: number }[];
@@ -393,13 +395,10 @@ export default function AnalyticsDashboard({ data }: { data: AnalyticsData }) {
           <HourlyChart data={filtered.hourlyDistribution} />
         </div>
 
-        <AdImpressionsSummary
-          impressionsByType={filtered.impressionsByType}
-          totalImpressions={summary.totalImpressions}
+        {/* Category Analysis Section */}
+        <CategoryAnalysis
+          shows={filtered.topPodcasts}
           totalDownloads={summary.totalDownloads}
-          fillRate={summary.fillRate}
-          downloadsWithAds={summary.downloadsWithAds}
-          dailyImpressions={filtered.dailyImpressions}
         />
 
         <TopShowsTable shows={filtered.topPodcasts} totalDownloads={summary.totalDownloads} />
@@ -409,6 +408,15 @@ export default function AnalyticsDashboard({ data }: { data: AnalyticsData }) {
           <DMATable data={filtered.byDMA} />
           <GeoBreakdown data={filtered.geoBreakdown} />
         </div>
+
+        <AdImpressionsSummary
+          impressionsByType={filtered.impressionsByType}
+          totalImpressions={summary.totalImpressions}
+          totalDownloads={summary.totalDownloads}
+          fillRate={summary.fillRate}
+          downloadsWithAds={summary.downloadsWithAds}
+          dailyImpressions={filtered.dailyImpressions}
+        />
       </main>
 
       {/* Footer */}
